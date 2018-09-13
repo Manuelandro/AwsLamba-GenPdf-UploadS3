@@ -1,0 +1,17 @@
+{
+    "name": "AwsLamba-GenPdf-UploadS3",
+    "version": "1.0.0",
+    "description": "AWS Lambda that Generate Pdf from html & upload it on AWS S3",
+    "main": "handler.js",
+    "scripts": {
+        "test": "node test/handler.test.js"
+    },
+    "author": "manuel palma",
+    "license": "MIT",
+    "dependencies": {
+        "aws-sdk": "^2.313.0",
+        "fs": "0.0.1-security",
+        "html-pdf": "^2.2.0",
+        "lambda-local": "^1.5.1",
+    }
+}
