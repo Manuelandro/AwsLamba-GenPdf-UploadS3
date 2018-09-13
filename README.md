@@ -32,6 +32,11 @@ Create a new Api in Amazon API Gateway
 
 ---
 
+### NOTE
+
+If the script throws an error about "binary execution", set the correct chmod to phantomjs_linux_x86_64 
+
+
 ## License
 
 MIT
