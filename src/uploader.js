@@ -11,22 +11,18 @@ const uploader = function(bucket, key, buffer, callback) {
             ContentType: "application/pdf"
         },
         function(err, data) {
+            let response = {}
             if (err != null) {
                 console.error("Unable to send file to S3")
-                callback("Unable to send file to S3")
-            } else {
-                let response = {
-                    statusCode: 200,
-                    headers: {
-                        "Content-type": "application/json"
-                    },
-                    body: key,
-                    isBase64Encoded: false
-                }
-
-                console.info(response)
-                callback(null, response)
+                response.statusCode = 500
+                response.headers = { "Content-type": "application/json" }
+                return callback(response)
             }
+            console.info("File uploaded")
+            response.statusCode = 200
+            response.headers = { "Content-type": "application/json" }
+            response.body = key
+            return callback(null, response)
         }
     )
 }
