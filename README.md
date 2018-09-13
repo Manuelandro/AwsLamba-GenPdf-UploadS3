@@ -15,7 +15,7 @@ Select all files (node_modules included) and create a .zip of them
 
 Create a new function inside Aws -> Lambda
 
-In the function source code select "Upload zip", then attach the zip create and save it.
+In the function source code select "Upload zip", then attach the zip created before and save it.
 
 `Choose Node 8+ in runtime configuration`
 `Set 1 minute in timeout configuration`
